@@ -1,0 +1,26 @@
+ <!-- <p>products works!</p> -->
+<div class="container">
+    <h3 class="h3">Shopping Items </h3>
+    <div class="row">
+        <div class="col-md-3 col-sm-6" *ngFor="let i of productsli; index as j">
+            <div class="product-grid">
+                <div class="product-image">
+                   
+                        <img class="pic-1" src="{{i.image}}" alt="image">
+                   
+                   <span class="product-new-label">Sale</span>
+                    <span class="product-discount-label">{{i.discount}}%</span>
+                </div>
+                     <div class="product-content">
+                    <h3 class="title">{{i.name}}</h3>
+                    <div class="price">{{disc(i.price,i.discount)}}
+                        <span>{{i.price}}</span>
+                    </div>
+                    <button type="button" (click)="addtocart(j)">+ Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+ 
