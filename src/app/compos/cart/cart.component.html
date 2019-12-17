@@ -1,73 +1,3 @@
-<!-- <div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-10 col-md-offset-1">
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Quantity</th>
-                        <th class="text-center">Price</th>
-                        <th class="text-center">Total</th>
-                        <th> </th>
-                    </tr>
-                </thead>
-                <tbody >
-                    <tr *ngFor="let q of naray; index as k">
-                        <td class="col-sm-8 col-md-6" >
-                        <div class="media">
-                            <img class="media-object" src="{{q.image}}" style="width: 72px; height: 72px;">
-                            <div class="media-body">
-                                <h4 class="media-heading">{{q.name}}</h4>
-                                
-                            </div>
-                        </div></td>
-                        <td   class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="number" class="form-control" id="exampleInputEmail1"  [(ngModel)]="binding">
-                        </td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>{{q.price}}</strong></td>
-                        <td class="col-sm-1 col-md-1 text-center"><strong>{{total(q.price,binding)}}</strong></td>
-                        <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">Remove
-                        </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td></td><td></td><td></td>
-                        <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>{{counta()}}</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td></td><td></td><td></td>
-                        <td><h5>Service tax(5%)</h5></td>
-                        <td class="text-right"><h5><strong>taxvalue</strong></h5></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>Totalvalue</strong></h3></td>
-                    </tr>
-                    <tr>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>   </td>
-                        <td>
-                        <button type="button" class="btn btn-primary">
-                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
-                        </button></td>
-                        <td>
-                        <button type="button" class="btn btn-success">
-                            Checkout <span class="glyphicon glyphicon-play"></span>
-                        </button></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div> -->
-
-<!-- ............................................................................... -->
 <section class="jumbotron text-center">
     <div class="container">
         <h1 class="jumbotron-heading">ABCD Shopping CART</h1>
@@ -89,7 +19,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let q of naray; index as k">
+                        <tr *ngFor="let q of addindex; index as k">
                             <td><img src="{{q.image}}"/> </td>
                             <td>{{q.name}}</td>
                             <td>In stock</td>
@@ -105,7 +35,7 @@
                             <td></td>
                             <td></td>
                             <td>Sub-Total</td>
-                            <td class="text-right">Rs.{{total(q.price,binding)}}</td>
+                            <td class="text-right">Rs.</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -139,3 +69,4 @@
         </div>
     </div>
 </div>
+<h1>{{k}}</h1>

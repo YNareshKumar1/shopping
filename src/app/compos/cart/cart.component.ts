@@ -9,14 +9,16 @@ import { KumarserService } from 'src/app/kumarser.service';
 export class CartComponent implements OnInit {
 
   constructor(private nar:KumarserService) { }
-  naray=[]
+  addindex=[]
   a=this.nar.shoplist
   b=this.nar.indexvals
   ngOnInit() {
     for(let i=0;i<this.b.length;i++){
-      this.naray.push(this.a[this.b[i]])
+      this.addindex.push(this.a[this.b[i]])
     }
+    this.nar.ilength=this.addindex.length;
   }
+  k=this.addindex.length
   subt=[]
   total(a: number,b: number){
     const c=a*b

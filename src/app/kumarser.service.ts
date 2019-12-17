@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class KumarserService {
   [x: string]: any;
 indexvals=[]
-len=this.indexvals.length
+ilength=this.indexvals.length
 deleteindexs=[]
 img1="/assets/pic1.webp"
 img2="/assets/pic2.webp"
