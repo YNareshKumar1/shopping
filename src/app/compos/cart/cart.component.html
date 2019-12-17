@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-sm-12 col-md-10 col-md-offset-1">
             <table class="table table-hover">
@@ -12,48 +12,48 @@
                     </tr>
                 </thead>
                 <tbody >
-                    <tr *ngFor="let q of naray">
+                    <tr *ngFor="let q of naray; index as k">
                         <td class="col-sm-8 col-md-6" >
                         <div class="media">
-                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="{{q.image}}" style="width: 72px; height: 72px;"> </a>
+                            <img class="media-object" src="{{q.image}}" style="width: 72px; height: 72px;">
                             <div class="media-body">
                                 <h4 class="media-heading">{{q.name}}</h4>
                                 
                             </div>
                         </div></td>
-                        <td class="col-sm-1 col-md-1" style="text-align: center">
-                        <input type="number" class="form-control" id="exampleInputEmail1" value="1" [(ngModel)]="binding">
+                        <td   class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="number" class="form-control" id="exampleInputEmail1"  [(ngModel)]="binding">
                         </td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>{{q.price}}</strong></td>
                         <td class="col-sm-1 col-md-1 text-center"><strong>{{total(q.price,binding)}}</strong></td>
                         <td class="col-sm-1 col-md-1">
-                        <button type="button" class="btn btn-danger">
-                            <span class="glyphicon glyphicon-remove"></span> Remove
-                        </button></td>
+                        <button type="button" class="btn btn-danger">Remove
+                        </button>
+                        </td>
                     </tr>
                     <tr>
                         <td></td><td></td><td></td>
                         <td><h5>Subtotal</h5></td>
-                        <td class="text-right"><h5><strong>{{subt}}</strong></h5></td>
+                        <td class="text-right"><h5><strong>{{counta()}}</strong></h5></td>
                     </tr>
                     <tr>
                         <td></td><td></td><td></td>
                         <td><h5>Service tax(5%)</h5></td>
-                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                        <td class="text-right"><h5><strong>taxvalue</strong></h5></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td><h3>Total</h3></td>
-                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                        <td class="text-right"><h3><strong>Totalvalue</strong></h3></td>
                     </tr>
                     <tr>
                         <td>   </td>
                         <td>   </td>
                         <td>   </td>
                         <td>
-                        <button type="button" class="btn btn-default">
+                        <button type="button" class="btn btn-primary">
                             <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
                         </button></td>
                         <td>
@@ -63,6 +63,79 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+    </div>
+</div> -->
+
+<!-- ............................................................................... -->
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">ABCD Shopping CART</h1>
+     </div>
+</section>
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"> </th>
+                            <th scope="col">Product</th>
+                            <th scope="col">Available</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Price</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let q of naray; index as k">
+                            <td><img src="{{q.image}}"/> </td>
+                            <td>{{q.name}}</td>
+                            <td>In stock</td>
+                            <td>
+                            
+                            <input class="input-number" type="number" value="1" min="0" max="5" [(ngModel)]="binding"/></td>
+                            <td class="text-right">Rs.{{q.price}}</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Sub-Total</td>
+                            <td class="text-right">Rs.{{total(q.price,binding)}}</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>Shipping</td>
+                            <td class="text-right">6,90 €</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>346,90 €</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="col mb-2">
+            <div class="row">
+                <div class="col-sm-12  col-md-6">
+                    <button class="btn btn-block btn-light">Continue Shopping</button>
+                </div>
+                <div class="col-sm-12 col-md-6 text-right">
+                    <button class="btn btn-lg btn-block btn-success text-uppercase">Checkout</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

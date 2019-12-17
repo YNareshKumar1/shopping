@@ -5,7 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class KumarserService {
   [x: string]: any;
-
+indexvals=[]
+len=this.indexvals.length
+deleteindexs=[]
 img1="/assets/pic1.webp"
 img2="/assets/pic2.webp"
 img3="/assets/pic3.webp"
@@ -30,5 +32,4 @@ shoplist=[{name:"Raymond Men's Shirt",price:1500,discount:20,image:this.img1,dpr
 {name:"U.S. Polo Assn Men's Shirt",price:1200,discount:5,image:this.img10,dprice:0},
 {name:"Wrangler Men's Shirt",price:1100,discount:15,image:this.img11,dprice:0},
 {name:"Indian Terrain Men's Shirt",price:1300,discount:10,image:this.img12,dprice:0}]
-indexvals=[]
 }

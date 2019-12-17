@@ -16,7 +16,6 @@ export class ProductsComponent implements OnInit {
   }
   disc(p: number,d: number){
     const r= (p*(100-d))/100
-    //this.serv.shoplist.dprice=r
     return r
   }
   addtocart(t: any){

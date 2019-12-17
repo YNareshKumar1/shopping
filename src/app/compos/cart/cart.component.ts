@@ -17,11 +17,11 @@ export class CartComponent implements OnInit {
       this.naray.push(this.a[this.b[i]])
     }
   }
-  subt=0
+  subt=[]
   total(a: number,b: number){
     const c=a*b
+    this.subt.push(c)
     //this.subt+=c
     return c
   }
-
-}
+  }
