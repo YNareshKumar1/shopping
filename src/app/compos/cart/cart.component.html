@@ -25,9 +25,9 @@
                             <td>In stock</td>
                             <td>
                             
-                            <input class="input-number" type="number" value="1" min="0" max="5" [(ngModel)]="binding"/></td>
-                            <td class="text-right">Rs.{{q.price}}</td>
-                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
+                            <input class="input-number" type="number" value="1" min="1" max="5" [(ngModel)]="binding"/></td>
+                            <td class="text-right">Rs.{{q.dprice}}</td>
+                            <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Remove</button> </td>
                         </tr>
                         <tr>
                             <td></td>
@@ -43,7 +43,7 @@
                             <td></td>
                             <td></td>
                             <td>Shipping</td>
-                            <td class="text-right">6,90 €</td>
+                            <td class="text-right">Rs.100</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -51,7 +51,7 @@
                             <td></td>
                             <td></td>
                             <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>346,90 €</strong></td>
+                            <td class="text-right"><strong>Rs.</strong></td>
                         </tr>
                     </tbody>
                 </table>

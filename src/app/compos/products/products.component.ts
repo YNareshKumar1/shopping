@@ -11,14 +11,22 @@ export class ProductsComponent implements OnInit {
 
   constructor(private serv:KumarserService) { }
   productsli=this.serv.shoplist
-  ngOnInit() {
+  // ngOnInit() {
  
+  // }
+  ngOnInit() {
+   
   }
+  // k=0
   disc(p: number,d: number){
     const dp= (p*(100-d))/100
+    // this.serv.shoplist.dprice[this.k]=dp
+    // this.k++;
     return dp
   }
+// pri=this.serv.shoplist.dprice
   addtocart(t: any){
     this.serv.indexvals.push(t)
   }
+
 }
