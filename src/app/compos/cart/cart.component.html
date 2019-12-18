@@ -22,11 +22,11 @@
                         <tr *ngFor="let q of addindex; index as k">
                             <td><img src="{{q.image}}"/> </td>
                             <td>{{q.name}}</td>
-                            <td>In stock</td>
+                            <td>In Stock</td>
                             <td>
                             
                             <input class="input-number" type="number" value="1" min="1" max="5" [(ngModel)]="binding"/></td>
-                            <td class="text-right">Rs.{{q.dprice}}</td>
+                            <td class="text-right">Rs.{{q.price}}</td>
                             <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i>Remove</button> </td>
                         </tr>
                         <tr>
@@ -35,7 +35,7 @@
                             <td></td>
                             <td></td>
                             <td>Sub-Total</td>
-                            <td class="text-right">Rs.</td>
+                            <td class="text-right">Rs.{{sub}}</td>
                         </tr>
                         <tr>
                             <td></td>
@@ -51,7 +51,7 @@
                             <td></td>
                             <td></td>
                             <td><strong>Total</strong></td>
-                            <td class="text-right"><strong>Rs.</strong></td>
+                            <td class="text-right"><strong>Rs.{{sub+100}}</strong></td>
                         </tr>
                     </tbody>
                 </table>

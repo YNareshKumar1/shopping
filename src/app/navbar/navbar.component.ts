@@ -9,7 +9,7 @@ import { KumarserService } from '../kumarser.service';
 export class NavbarComponent implements OnInit {
 
   constructor(private kumar:KumarserService) { }
-  count=this.kumar.ilength
+  cartcount=this.kumar.ilength
   
   ngOnInit() {
   }

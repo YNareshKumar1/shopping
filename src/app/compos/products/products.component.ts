@@ -26,7 +26,7 @@ export class ProductsComponent implements OnInit {
   }
 // pri=this.serv.shoplist.dprice
   addtocart(t: any){
-    this.serv.indexvals.push(t)
+    this.serv.addindexvals.push(t)
   }
 
 }
